@@ -18,34 +18,42 @@
         }
     </style>
 
-    <div class="h-screen w-full bg-[#232323]">
+    <div class="h-[750px] w-full bg-[#232323]">
         @include('components.layouts.guest-navbar')
         <div class="container mx-auto relative h-full w-full">
-            <svg class="rounded-xl intro" viewbox="0 0 200 86">
-                <text text-anchor="start" x="10" y="30" class="text text-stroke"
-                    clip-path="url(#text1)">Kabai</text>
-                <text text-anchor="start" x="10" y="50" class="text text-stroke"
-                    clip-path="url(#text2)">Delta</text>
-                <text text-anchor="start" x="10" y="70" class="text text-stroke"
-                    clip-path="url(#text3)">kse</text>
-                <text text-anchor="start" x="10" y="30" class="text text-stroke text-stroke-2"
-                    clip-path="url(#text1)">Kabai</text>
-                <text text-anchor="start" x="10" y="50" class="text text-stroke text-stroke-2"
-                    clip-path="url(#text2)">Delta</text>
-                <text text-anchor="start" x="10" y="70" class="text text-stroke text-stroke-2"
-                    clip-path="url(#text3)">kse</text>
-                <defs>
-                    <clipPath id="text1">
-                        <text text-anchor="start" x="10" y="30" class="text">Kabai</text>
-                    </clipPath>
-                    <clipPath id="text2">
-                        <text text-anchor="start" x="10" y="50" class="text">Delta</text>
-                    </clipPath>
-                    <clipPath id="text3">
-                        <text text-anchor="start" x="10" y="70" class="text">kse</text>
-                    </clipPath>
-                </defs>
-            </svg>
+            <div class="cardDiv rounded-xl">
+                <div class="grid grid-cols-3 h-full w-full">
+                    <svg class="rounded-xl intro h-full" viewbox="0 0 100 86">
+                        <text text-anchor="start" x="10" y="30" class="text text-stroke"
+                            clip-path="url(#text1)">Kabai</text>
+                        <text text-anchor="start" x="10" y="50" class="text text-stroke"
+                            clip-path="url(#text2)">Delta</text>
+                        <text text-anchor="start" x="10" y="70" class="text text-stroke"
+                            clip-path="url(#text3)">kse</text>
+                        <text text-anchor="start" x="10" y="30" class="text text-stroke text-stroke-2"
+                            clip-path="url(#text1)">Kabai</text>
+                        <text text-anchor="start" x="10" y="50" class="text text-stroke text-stroke-2"
+                            clip-path="url(#text2)">Delta</text>
+                        <text text-anchor="start" x="10" y="70" class="text text-stroke text-stroke-2"
+                            clip-path="url(#text3)">kse</text>
+                        <defs>
+                            <clipPath id="text1">
+                                <text text-anchor="start" x="10" y="30" class="text">Kabai</text>
+                            </clipPath>
+                            <clipPath id="text2">
+                                <text text-anchor="start" x="10" y="50" class="text">Delta</text>
+                            </clipPath>
+                            <clipPath id="text3">
+                                <text text-anchor="start" x="10" y="70" class="text">kse</text>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="col-span-2 h-full flex justify-center items-center p-8">
+                        <img class="w-full" src="{{ URL::asset('images/logo3.png') }}" />
+                    </div>
+                </div>
+            </div>
+
             <div class="pt-20 h-full">
                 <span class="ball relative flex h-4 w-4">
                     <span
@@ -62,7 +70,7 @@
         </div>
 
     </div>
-    <div class="relative w-full bg-[#232323] pb-14 text-white">
+    <div class="relative w-full px-4 bg-[#232323] pb-14 text-white">
         <div class="container mx-auto">
             <h2 class="text-center text-3xl mb-8">Események</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -108,459 +116,20 @@
     </div>
 
     <div class="container mx-auto py-14">
-        <h2 class="text-center text-3xl mb-8">Csapatok</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <h2 class="text-center text-3xl mb-8">Csapattagok</h2>
+        <div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            @foreach ($players as $player)
+                <div class="h-fit w-full">
 
-                <div class="h-fit">
-                    <div>
-                        <img class="clippingProfile object-cover w-full h-48"
-                            src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="prof" />
-                        <svg class="h-2">
-                            <defs>
-                                <clipPath id="myClipPath">
-                                    <rect x="0" y="0" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="15" y="0" width="160" height="30" />
-                                    <rect x="160" y="0" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="20" y="30" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="30" width="160" height="30" />
-                                    <rect x="170" y="30" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="10" y="60" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="25" y="60" width="160" height="30" />
-                                    <rect x="165" y="60" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="25" y="90" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="40" y="90" width="160" height="30" />
-                                    <rect x="180" y="90" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="20" y="120" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="35" y="120" width="160" height="30" />
-                                    <rect x="175" y="120" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="150" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="150" width="160" height="30" />
-                                    <rect x="165" y="150" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="180" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="180" width="160" height="30" />
-                                    <rect x="175" y="180" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="210" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="210" width="160" height="30" />
-                                    <rect x="165" y="210" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="10" y="240" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="240" width="160" height="30" />
-                                    <rect x="170" y="240" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="270" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="270" width="160" height="30" />
-                                    <rect x="175" y="270" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="300" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="300" width="160" height="30" />
-                                    <rect x="165" y="300" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="330" width="30" height="30"
-                                        rx="30" ry="30" transform="translate(50)" />
-                                    <rect x="30" y="330" width="160" height="30"
-                                        transform="translate(50)" />
-                                    <rect x="175" y="330" width="30" height="30"
-                                        rx="30" ry="30" transform="translate(50)" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
+                    <img class="rounded-md object-cover w-full h-89"
+                        src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="prof" />
 
 
                     <h2 class="text-center">
                         Lorem ipsum
                     </h2>
                 </div>
-
-                <div class="h-fit">
-                    <div>
-                        <img class="clippingProfile object-cover w-full h-48"
-                            src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="prof" />
-                        <svg class="h-2">
-                            <defs>
-                                <clipPath id="myClipPath">
-                                    <rect x="0" y="0" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="15" y="0" width="160" height="30" />
-                                    <rect x="160" y="0" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="20" y="30" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="30" width="160" height="30" />
-                                    <rect x="170" y="30" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="10" y="60" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="25" y="60" width="160" height="30" />
-                                    <rect x="165" y="60" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="25" y="90" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="40" y="90" width="160" height="30" />
-                                    <rect x="180" y="90" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="20" y="120" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="35" y="120" width="160" height="30" />
-                                    <rect x="175" y="120" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="150" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="150" width="160" height="30" />
-                                    <rect x="165" y="150" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="180" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="180" width="160" height="30" />
-                                    <rect x="175" y="180" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="210" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="210" width="160" height="30" />
-                                    <rect x="165" y="210" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="10" y="240" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="240" width="160" height="30" />
-                                    <rect x="170" y="240" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="270" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="270" width="160" height="30" />
-                                    <rect x="175" y="270" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="300" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="300" width="160" height="30" />
-                                    <rect x="165" y="300" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="330" width="30" height="30"
-                                        rx="30" ry="30" transform="translate(50)" />
-                                    <rect x="30" y="330" width="160" height="30"
-                                        transform="translate(50)" />
-                                    <rect x="175" y="330" width="30" height="30"
-                                        rx="30" ry="30" transform="translate(50)" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-
-
-                    <h2 class="text-center">
-                        Lorem ipsum
-                    </h2>
-                </div>
-
-                <div class="h-fit">
-                    <div>
-                        <img class="clippingProfile object-cover w-full h-48"
-                            src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="prof" />
-                        <svg class="h-2">
-                            <defs>
-                                <clipPath id="myClipPath">
-                                    <rect x="0" y="0" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="15" y="0" width="160" height="30" />
-                                    <rect x="160" y="0" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="20" y="30" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="30" width="160" height="30" />
-                                    <rect x="170" y="30" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="10" y="60" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="25" y="60" width="160" height="30" />
-                                    <rect x="165" y="60" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="25" y="90" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="40" y="90" width="160" height="30" />
-                                    <rect x="180" y="90" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="20" y="120" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="35" y="120" width="160" height="30" />
-                                    <rect x="175" y="120" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="150" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="150" width="160" height="30" />
-                                    <rect x="165" y="150" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="180" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="180" width="160" height="30" />
-                                    <rect x="175" y="180" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="210" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="210" width="160" height="30" />
-                                    <rect x="165" y="210" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="10" y="240" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="240" width="160" height="30" />
-                                    <rect x="170" y="240" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="270" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="270" width="160" height="30" />
-                                    <rect x="175" y="270" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="300" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="300" width="160" height="30" />
-                                    <rect x="165" y="300" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="330" width="30" height="30"
-                                        rx="30" ry="30" transform="translate(50)" />
-                                    <rect x="30" y="330" width="160" height="30"
-                                        transform="translate(50)" />
-                                    <rect x="175" y="330" width="30" height="30"
-                                        rx="30" ry="30" transform="translate(50)" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-
-
-                    <h2 class="text-center">
-                        Lorem ipsum
-                    </h2>
-                </div>
-
-                <div class="h-fit">
-                    <div>
-                        <img class="clippingProfile object-cover w-full h-48"
-                            src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="prof" />
-                        <svg class="h-2">
-                            <defs>
-                                <clipPath id="myClipPath">
-                                    <rect x="0" y="0" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="15" y="0" width="160" height="30" />
-                                    <rect x="160" y="0" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="20" y="30" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="30" width="160" height="30" />
-                                    <rect x="170" y="30" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="10" y="60" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="25" y="60" width="160" height="30" />
-                                    <rect x="165" y="60" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="25" y="90" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="40" y="90" width="160" height="30" />
-                                    <rect x="180" y="90" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="20" y="120" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="35" y="120" width="160" height="30" />
-                                    <rect x="175" y="120" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="150" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="150" width="160" height="30" />
-                                    <rect x="165" y="150" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="180" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="180" width="160" height="30" />
-                                    <rect x="175" y="180" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="210" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="210" width="160" height="30" />
-                                    <rect x="165" y="210" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="10" y="240" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="240" width="160" height="30" />
-                                    <rect x="170" y="240" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="270" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="270" width="160" height="30" />
-                                    <rect x="175" y="270" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="300" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="300" width="160" height="30" />
-                                    <rect x="165" y="300" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="330" width="30" height="30"
-                                        rx="30" ry="30" transform="translate(50)" />
-                                    <rect x="30" y="330" width="160" height="30"
-                                        transform="translate(50)" />
-                                    <rect x="175" y="330" width="30" height="30"
-                                        rx="30" ry="30" transform="translate(50)" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-
-
-                    <h2 class="text-center">
-                        Lorem ipsum
-                    </h2>
-                </div>
-
-                <div class="h-fit">
-                    <div>
-                        <img class="clippingProfile object-cover w-full h-48"
-                            src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="prof" />
-                        <svg class="h-2">
-                            <defs>
-                                <clipPath id="myClipPath">
-                                    <rect x="0" y="0" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="15" y="0" width="160" height="30" />
-                                    <rect x="160" y="0" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="20" y="30" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="30" width="160" height="30" />
-                                    <rect x="170" y="30" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="10" y="60" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="25" y="60" width="160" height="30" />
-                                    <rect x="165" y="60" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="25" y="90" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="40" y="90" width="160" height="30" />
-                                    <rect x="180" y="90" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="20" y="120" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="35" y="120" width="160" height="30" />
-                                    <rect x="175" y="120" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="150" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="150" width="160" height="30" />
-                                    <rect x="165" y="150" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="180" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="180" width="160" height="30" />
-                                    <rect x="175" y="180" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="210" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="210" width="160" height="30" />
-                                    <rect x="165" y="210" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="10" y="240" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="240" width="160" height="30" />
-                                    <rect x="170" y="240" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="270" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="30" y="270" width="160" height="30" />
-                                    <rect x="175" y="270" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="5" y="300" width="30" height="30"
-                                        rx="30" ry="30" />
-                                    <rect x="20" y="300" width="160" height="30" />
-                                    <rect x="165" y="300" width="30" height="30"
-                                        rx="30" ry="30" />
-
-                                    <rect x="15" y="330" width="30" height="30"
-                                        rx="30" ry="30" transform="translate(50)" />
-                                    <rect x="30" y="330" width="160" height="30"
-                                        transform="translate(50)" />
-                                    <rect x="175" y="330" width="30" height="30"
-                                        rx="30" ry="30" transform="translate(50)" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-
-
-                    <h2 class="text-center">
-                        Lorem ipsum
-                    </h2>
-                </div>
-
+            @endforeach
         </div>
     </div>
 </x-guest-layout>

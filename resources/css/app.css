@@ -23,16 +23,24 @@
     clip-path: url(#myClipPath);
 }
 
-
-svg.intro {
+.cardDiv {
     background: linear-gradient(135deg, #a6633c, #391a08);
     max-width: 800px;
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: 100;
     transform: translate(0%, -50%);
     box-shadow: 0 30px 50px -20px rgb(69, 31, 9);
+}
 
+@media only screen and (max-width: 760px) {
+    .cardDiv {
+        left: 0%
+    }
+}
+
+svg.intro {
     .text {
       display: none;
     }
