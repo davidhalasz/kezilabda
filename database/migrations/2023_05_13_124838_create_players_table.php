@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('players', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('position');
+            $table->string('description');
+            $table->string('avatar');
             $table->timestamps();
         });
     }

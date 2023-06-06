@@ -9,6 +9,6 @@ class Player extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
+        'name', 'position', 'description', 'avatar'
     ];
 }

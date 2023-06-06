@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PlayerController::class, 'index']);
 
+/*
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -26,3 +27,4 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+*/
